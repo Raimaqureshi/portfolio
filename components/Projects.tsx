@@ -1,5 +1,6 @@
 // components/Projects.js
 
+import Image from 'next/image';
 import React from 'react';
 
 const Projects = () => {
@@ -39,7 +40,7 @@ const Projects = () => {
             key={index}
             className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800"
           >
-            <img
+            <Image
               className="w-full h-48 object-cover"
               src={project.image}
               alt={project.name}
