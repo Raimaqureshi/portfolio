@@ -1,0 +1,124 @@
+/* styles/Hero.module.css */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('/pictures/images.jfif');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.heroContent {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2-column grid */
+  gap: 2rem;
+  align-items: center;
+}
+
+.heroContentLeft {
+  text-align: center;
+}
+
+.heroContentLeftText {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f97316; /* orange-700 */
+}
+
+.heroContentTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.heroContentSubtitle {
+  font-size: 1.125rem;
+  color: #ffffff;
+}
+
+.heroContentGreen {
+  color: #4ade80; /* green-400 */
+}
+
+.heroContentYellow {
+  color: #facc15; /* yellow-400 */
+}
+
+.heroDescription {
+  font-size: 1.125rem;
+  color: #ffffff;
+  margin-top: 1rem;
+}
+
+.contactButton {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #f97316; /* orange-600 */
+  color: #ffffff;
+  border-radius: 9999px;
+  transition: background-color 0.3s;
+}
+
+.contactButton:hover {
+  background-color: #fb923c; /* orange-500 */
+}
+
+.heroImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.heroImage {
+  border-radius: 9999px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 288px;
+  height: 288px;
+  max-width: 100%; /* Ensure image is responsive */
+  max-height: 100%; /* Ensure image is responsive */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    height: auto; /* Allow for content to adjust with screen size */
+    padding: 1rem;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr; /* Stack the grid content in a single column on small screens */
+    gap: 1.5rem; /* Add space between elements */
+  }
+
+  .heroContentTitle {
+    font-size: 2.5rem; /* Make title smaller on mobile */
+  }
+
+  .heroContentSubtitle {
+    font-size: 1rem; /* Adjust subtitle size */
+  }
+
+  .heroContentLeftText {
+    font-size: 2rem; /* Adjust heading size for mobile */
+  }
+
+  .heroDescription {
+    font-size: 1rem; /* Make description smaller on mobile */
+  }
+
+  .contactButton {
+    padding: 0.5rem 1rem; /* Adjust padding for the button on small screens */
+  }
+
+  .heroImage {
+    width: 200px; /* Adjust image size for mobile */
+    height: 200px; /* Adjust image size for mobile */
+  }
+}

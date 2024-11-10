@@ -1,24 +1,28 @@
+// components/Skills.tsx
+"use client";
+
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact } from "react-icons/fa";
+import styles from "../styles/Skills.module.css"; // Import the CSS module
 
 export default function Skills() {
   return (
-    <div className="skills-section p-4 bg-gray-900">
-      <h2 className="text-white text-3xl font-bold ml-4 mb-4">Skills</h2>
-      <ul className="list-none space-y-2 text-lg text-gray-400 ml-5">
-        <li className="flex items-center">
-          <FaJsSquare className="mr-2 text-yellow-500" />
+    <div className={styles.skillsSection}>
+      <h2 className={styles.skillsHeading}>Skills</h2>
+      <ul className={styles.skillsList}>
+        <li className={styles.skillsItem}>
+          <FaJsSquare className={`${styles.icon} ${styles.iconJs}`} />
           JavaScript / TypeScript
         </li>
-        <li className="flex items-center">
-          <FaReact className="mr-2 text-blue-400" />
+        <li className={styles.skillsItem}>
+          <FaReact className={`${styles.icon} ${styles.iconReact}`} />
           React & Next.js
         </li>
-        <li className="flex items-center">
-          <FaHtml5 className="mr-2 text-orange-500" />
+        <li className={styles.skillsItem}>
+          <FaHtml5 className={`${styles.icon} ${styles.iconHtml}`} />
           HTML & CSS
         </li>
-        <li className="flex items-center">
-          <FaCss3Alt className="mr-2 text-blue-500" />
+        <li className={styles.skillsItem}>
+          <FaCss3Alt className={`${styles.icon} ${styles.iconCss}`} />
           Tailwind CSS
         </li>
       </ul>

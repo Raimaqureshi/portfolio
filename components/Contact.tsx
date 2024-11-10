@@ -3,25 +3,22 @@
 
 import React from 'react';
 import emailjs from 'emailjs-com';
-
+import styles from '../styles/Contact.module.css'; // Import the CSS module
 
 const Contact: React.FC = () => {
   return (
-    <section id="contact"
-     className="p-10 bg-gray-900 text-center"
-     >
-      <h2 className="text-white text-3xl font-semibold">Contact Me</h2>
-      <form className="mt-4 space-y-4" onSubmit={sendEmail}>
-        <input type="text" placeholder="Name" className="w-full p-2 border rounded" />
-        <input type="email" placeholder="Email" className="w-full p-2 border rounded" />
-        <textarea placeholder="Message" className="w-full p-2 border rounded h-32"></textarea>
-        <button className="px-6 py-2 bg-orange-600 text-white rounded hover:bg-orange-500">
-          Send
-        </button>
+    <section id="contact" className={styles.contactSection}>
+      <h2 className={styles.contactHeading}>Contact Me</h2>
+      <form className={styles.contactForm} onSubmit={sendEmail}>
+        <input type="text" placeholder="Name" className={styles.contactInput} />
+        <input type="email" placeholder="Email" className={styles.contactInput} />
+        <textarea placeholder="Message" className={styles.contactTextarea}></textarea>
+        <button className={styles.contactButton}>Send</button>
       </form>
     </section>
   );
 }
+
 const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
@@ -32,4 +29,5 @@ const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
           console.error('Failed to send email.', error.text);
       });
 };
+
 export default Contact;

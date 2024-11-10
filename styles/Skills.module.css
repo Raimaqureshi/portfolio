@@ -1,0 +1,56 @@
+/* styles/Skills.module.css */
+
+/* Style for the skills section */
+.skillsSection {
+    padding: 1rem; /* p-4 equivalent */
+    background-color: #1a202c; /* bg-gray-900 */
+  }
+  
+  /* Style for the heading */
+  .skillsHeading {
+    color: white;
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700; /* font-bold */
+    margin-left: 1rem; /* ml-4 */
+    margin-bottom: 1rem; /* mb-4 */
+  }
+  
+  /* Style for the list */
+  .skillsList {
+    list-style: none; /* list-none */
+    padding-left: 1.25rem; /* ml-5 equivalent */
+    font-size: 1.125rem; /* text-lg */
+    color: #e2e8f0; /* text-gray-400 */
+    margin: 0;
+  }
+  
+  /* Style for each list item */
+  .skillsItem {
+    display: flex;
+    align-items: center; /* flex items-center */
+    margin-bottom: 0.5rem; /* space-y-2 equivalent */
+  }
+  
+  /* Style for the icons */
+  .icon {
+    margin-right: 0.5rem; /* mr-2 equivalent */
+    font-size: 1.5rem; /* Adjust icon size */
+  }
+  
+  /* Color for each icon */
+  .iconJs {
+    color: #f59e0b; /* text-yellow-500 */
+  }
+  
+  .iconReact {
+    color: #3b82f6; /* text-blue-400 */
+  }
+  
+  .iconHtml {
+    color: #f97316; /* text-orange-500 */
+  }
+  
+  .iconCss {
+    color: #2563eb; /* text-blue-500 */
+  }
+  

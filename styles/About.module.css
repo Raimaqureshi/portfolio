@@ -1,0 +1,45 @@
+/* styles/About.module.css */
+
+.container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25rem; /* 5 units of padding */
+    background-color: #111827; /* gray-900 */
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    color: #ffffff; /* white */
+    margin-left: 1rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .sectionText {
+    font-size: 1.125rem; /* text-lg */
+    color: #9ca3af; /* gray-400 */
+    margin-left: 1.5rem; /* ml-6 */
+  }
+  
+  .goalTitle {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: bold;
+    color: #facc15; /* yellow-500 */
+    margin-left: 1.25rem; /* ml-5 */
+    margin-bottom: 0.75rem; /* mb-3 */
+  }
+  
+  .listItem {
+    font-size: 1.125rem; /* text-lg */
+    color: #9ca3af; /* gray-400 */
+    margin-left: 1.25rem; /* ml-5 */
+    list-style-type: disc;
+    padding-left: 1.5rem; /* pl-6 */
+  }
+  
+  .resumeSection {
+    margin-top: 2rem;
+  }
+  

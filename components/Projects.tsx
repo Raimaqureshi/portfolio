@@ -1,9 +1,11 @@
-// components/Projects.js
+// components/Projects.tsx
+"use client";
 
-import Image from 'next/image';
 import React from 'react';
+import Image from 'next/image';
+import styles from '../styles/Project.module.css'; // Import the CSS module
 
-const Projects = () => {
+const Projects: React.FC = () => {
   const projects = [
     {
       name: "My Own Resume",
@@ -14,7 +16,7 @@ const Projects = () => {
     {
       name: "Calendar App",
       description: "An interactive calendar app for managing and organizing events with a user-friendly interface and customizable features.",
-      image: "/pictures/calendar.png",  // Path to image
+      image: "/pictures/cale.png",  // Path to image
       link: "https://calendar-projecy.vercel.app/"  // Vercel project link
     },
     {
@@ -32,29 +34,29 @@ const Projects = () => {
   ];
 
   return (
-    <div className=" bg-gray-900 w-full py-16 px-8">
-      <h2 className="text-3xl font-bold text-center mb-8 text-white">Projects</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className={styles.projectsContainer}>
+      <h2 className={styles.projectsTitle}>Projects</h2>
+      <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800"
-          >
+          <div key={index} className={styles.projectCard}>
             <Image
-              className="w-full h-48 object-cover"
+              className={styles.projectImage}
               src={project.image}
               alt={project.name}
+              width={1600}  
+              height={900}  
+              priority={true}  // optional, to load the image early
             />
-            <div className="px-6 py-4">
-              <h3 className="text-xl font-bold text-white">{project.name}</h3>
-              <p className="text-gray-400 mt-2">{project.description}</p>
+            <div className={styles.projectInfo}>
+              <h3 className={styles.projectTitle}>{project.name}</h3>
+              <p className={styles.projectDescription}>{project.description}</p>
             </div>
-            <div className="px-6 pb-4">
+            <div className={styles.projectButtonContainer}>
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-full w-full text-center"
+                className={styles.projectButton}
               >
                 View Project
               </a>

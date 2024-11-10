@@ -1,0 +1,24 @@
+/* styles/Resume.module.css */
+
+/* Style for the container */
+.resumeContainer {
+    text-align: center;
+    margin-top: 2.5rem; /* mt-10 equivalent */
+  }
+  
+  /* Style for the download button */
+  .downloadButton {
+    background-color: #f97316; /* bg-orange-600 */
+    color: white;
+    padding: 0.75rem 1.5rem; /* px-6 py-3 equivalent */
+    border-radius: 9999px; /* rounded-full equivalent */
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+  }
+  
+  /* Hover effect */
+  .downloadButton:hover {
+    background-color: #fb923c; /* bg-orange-500 */
+  }
+  

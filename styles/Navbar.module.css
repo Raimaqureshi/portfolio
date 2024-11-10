@@ -1,0 +1,80 @@
+/* Navbar.module.css */
+
+/* Base navbar style */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Styling for the spans in the title */
+  .navbarSpan {
+    color: #ffa500; /* Adjust the color for the spans in the title */
+  }
+  
+  /* Desktop Navigation (visible on larger screens) */
+  .desktopNav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .desktopNav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile Navigation */
+  .mobileNav {
+    display: none; /* Initially hide mobile nav */
+  }
+  
+  .hamburgerButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  /* Dropdown Menu for Mobile (hidden by default) */
+  .dropdownMenu {
+    display: none; /* Initially hide the menu */
+    position: absolute;
+    top: 50px; /* Adjust based on your layout */
+    right: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+  }
+  
+  /* Show the dropdown menu when the state is open */
+  .open {
+    display: block;
+  }
+  
+  .dropdownMenu a {
+    color: white;
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  /* Media Query for Mobile (Hide Desktop Links, Show Hamburger Button) */
+  @media (max-width: 768px) {
+    .desktopNav {
+      display: none; /* Hide desktop links on smaller screens */
+    }
+  
+    .mobileNav {
+      display: block; /* Show hamburger button */
+    }
+  }
+  
